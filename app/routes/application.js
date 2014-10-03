@@ -1,32 +1,41 @@
 import Ember from 'ember';
+import ajax from 'ic-ajax';
 import config from '../config/environment';
 
 var apiURL = config.apiURL;
 
 export default Ember.Route.extend({
+  setupController: function() {
+    this.run('info');
+  },
+
+  run: function(command) {
+    var controller = this.controllerFor('application');
+
+    return ajax(apiURL + '/' + command).then(function(data) {
+      controller.setProperties(data);
+    });
+  },
+
   actions: {
     play: function() {
-      $.getJSON(apiURL + '/play');
+      this.run('play');
     },
 
     pause: function() {
-      $.getJSON(apiURL + '/pause');
+      this.run('pause');
     },
 
     next: function() {
-      $.getJSON(apiURL + '/next');
+      this.run('next');
     },
 
     up: function() {
-      $.getJSON(apiURL + '/up');
+      this.run('up');
     },
 
     down: function() {
-      $.getJSON(apiURL + '/down');
-    },
-
-    info: function() {
-      $.getJSON(apiURL + '/info');
-    },
+      this.run('down');
+    }
   }
 });
