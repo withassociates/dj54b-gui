@@ -1,11 +1,13 @@
 <h2 id='title'>Welcome to DJ54B</h2>
 
-<p>State: {{state}}</p>
+<p>
+  <button {{action "play"}}>Play</button>
+  <button {{action "pause"}}>Pause</button>
+  <button {{action "next"}}>Next</button>
+  <button {{action "up"}}>Up</button>
+  <button {{action "down"}}>Down</button>
+</p>
 <p>Track: {{track.name}} by {{track.artist}}</p>
+<p>State: {{state}}</p>
 <p>Volume: {{volume}}</p>
-
-<button {{action "play"}}>Play</button>
-<button {{action "pause"}}>Pause</button>
-<button {{action "next"}}>Next</button>
-<button {{action "up"}}>Up</button>
-<button {{action "down"}}>Down</button>
+<p>{{spotify-art trackID=track.id}}</p>
