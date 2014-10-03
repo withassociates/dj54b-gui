@@ -1,6 +1,6 @@
 {
   "name": "dj54b-gui",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "directories": {
     "doc": "doc",
@@ -11,7 +11,7 @@
     "build": "ember build",
     "test": "ember test"
   },
-  "repository": "https://github.com/stefanpenner/ember-cli",
+  "repository": "https://github.com/withassociates/dj54b-gui",
   "engines": {
     "node": ">= 0.10.0"
   },
