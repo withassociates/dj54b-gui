@@ -2,7 +2,7 @@
 
 This README outlines the details of collaborating on this Ember application.
 
-A short introduction of this app could easily go here.
+This app is a browser UI for [DJ54B API](https://github.com/withassociates/dj54b-api).
 
 ## Prerequisites
 
