@@ -1,8 +1,11 @@
 <h2 id='title'>Welcome to DJ54B</h2>
 
 <p>
-  <button {{action "play"}}>Play</button>
-  <button {{action "pause"}}>Pause</button>
+  {{#if isPlaying}}
+    <button {{action "pause"}}>Pause</button>
+  {{else}}
+    <button {{action "play"}}>Play</button>
+  {{/if}}
   <button {{action "next"}}>Next</button>
   <button {{action "up"}}>Up</button>
   <button {{action "down"}}>Down</button>
