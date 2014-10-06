@@ -4,6 +4,7 @@ import ajax from 'ic-ajax';
 export default Ember.Component.extend({
   tagName: 'img',
   attributeBindings: ['src'],
+  classNames: ['track-image'],
 
   fetchArt: function() {
     this.set('src', '');

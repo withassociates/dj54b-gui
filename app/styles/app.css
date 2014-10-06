@@ -1,3 +1,118 @@
-html, body {
-  margin: 20px;
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+
+  font-family: "Avenir Next", sans-serif;
+  line-height: 1.5em;
+
+  height: 100%;
+  margin: 0;
+
+  background: #f0f0f0;
+  color: #333333;
 }
+
+html { height: 100%; }
+
+p { margin: 24px 0; }
+
+.application {
+  height: 100%;
+
+  font-size: 0;
+  list-style: 0;
+
+  white-space: nowrap;
+}
+
+.application:after {
+  content: '';
+
+  height: 100%;
+
+  display: inline-block;
+
+  vertical-align: middle;
+}
+
+.content-container {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  display: inline-block;
+
+  margin: 48px 0;
+  padding: 0 24px;
+  width: 100%;
+
+  font-size: 16px;
+  line-height: 1.5em;
+  text-align: center;
+
+  vertical-align: middle;
+  white-space: normal;
+}
+
+.control {
+  height: 48px;
+  margin: 0 6px 12px 6px;
+  width: 48px;
+
+  font-size: 1em;
+  line-height: 1em;
+
+  background: #333333;
+  border: 0;
+  border-radius: 50%;
+  color: #ffffff;
+  cursor: pointer;
+  outline: 0;
+}
+
+.control.up,
+.control.down {
+  font-size: 1.375em;
+  line-height: 0.7272em;
+}
+
+.controls { margin: 72px 0 -12px; }
+
+@media (max-width: 512px) {
+  .controls { margin: 32px 0 -12px; }
+}
+
+.track-artist,
+.track-name {
+  font-size: 2em;
+  line-height: 1.25em;
+}
+
+@media (max-width: 512px) {
+  .track-artist,
+  .track-name {
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+}
+
+.track-name { font-weight: 700; }
+
+.track-image {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  display: block;
+
+  margin: 0 auto 24px auto;
+  max-width: 100%;
+  padding: 24px;
+
+  background: #ffffff;
+}
+
+@media (max-width: 512px) {
+  .track-image { padding: 12px; }
+}
+

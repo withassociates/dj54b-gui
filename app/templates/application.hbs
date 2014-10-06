@@ -1,16 +1,16 @@
-<h2 id='title'>Welcome to DJ54B</h2>
+<div class="content-container">
+  {{spotify-art trackID=track.id}}
+  <div class="track-name">{{track.name}}</div>
+  <div class="track-artist">{{track.artist}}</div>
 
-<p>
-  {{#if isPlaying}}
-    <button {{action "pause"}}>Pause</button>
-  {{else}}
-    <button {{action "play"}}>Play</button>
-  {{/if}}
-  <button {{action "next"}}>Next</button>
-  <button {{action "up"}}>Up</button>
-  <button {{action "down"}}>Down</button>
-</p>
-<p>Track: {{track.name}} by {{track.artist}}</p>
-<p>State: {{state}}</p>
-<p>Volume: {{volume}}</p>
-<p>{{spotify-art trackID=track.id}}</p>
+  <div class="controls">
+    {{#if isPlaying}}
+      <button class="control pause" {{action "pause"}}><i class="fa fa-pause"></i></button>
+    {{else}}
+      <button class="control play" {{action "play"}}><i class="fa fa-play"></i></button>
+    {{/if}}
+    <button class="control next" {{action "next"}}><i class="fa fa-step-forward"></i></button>
+    <button class="control down" {{action "down"}}><i class="fa fa-volume-down"></i></button>
+    <button class="control up" {{action "up"}}><i class="fa fa-volume-up"></i></button>
+  </div>
+</div>
