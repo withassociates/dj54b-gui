@@ -69,6 +69,11 @@ p { margin: 24px 0; }
   color: #ffffff;
   cursor: pointer;
   outline: 0;
+  transition: opacity 0.3s;
+}
+
+.control:hover {
+  opacity: 0.5;
 }
 
 .control.up,
@@ -114,6 +119,9 @@ p { margin: 24px 0; }
 }
 
 @media (max-width: 512px) {
-  .track-image { padding: 12px; }
+  .track-image { padding: 12px; 
+    max-height: 40%;
+  }
+
 }
 
