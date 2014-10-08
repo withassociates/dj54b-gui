@@ -114,6 +114,9 @@ p { margin: 24px 0; }
 }
 
 @media (max-width: 512px) {
-  .track-image { padding: 12px; }
+  .track-image { padding: 12px; 
+    max-height: 40%;
+  }
+
 }
 
