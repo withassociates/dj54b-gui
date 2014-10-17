@@ -6,7 +6,13 @@ var apiURL = config.apiURL;
 
 export default Ember.Route.extend({
   setupController: function() {
-    this.run('info');
+    this.refresh();
+  },
+
+  refresh: function() {
+    this.run('info').then(function() {
+      Ember.run.later(this, 'refresh', 1000);
+    }.bind(this));
   },
 
   run: function(command) {
