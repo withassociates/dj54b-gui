@@ -1,6 +1,8 @@
 /* jshint node: true */
 
 module.exports = function(environment) {
+  var API_URL = process.env.API_URL;
+
   var ENV = {
     modulePrefix: 'dj54b-gui',
     environment: environment,
@@ -36,7 +38,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     ENV.APP.LOG_VIEW_LOOKUPS = true;
 
-    ENV.apiURL = 'http://localhost:9292';
+    ENV.apiURL = API_URL || 'http://localhost:9292';
   }
 
   if (environment === 'test') {
@@ -52,7 +54,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.apiURL = API_URL || 'http://lorne.withassociates.com:9292';
   }
 
   return ENV;
