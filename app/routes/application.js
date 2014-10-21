@@ -11,7 +11,7 @@ export default Ember.Route.extend({
 
   refresh: function() {
     this.run('info').then(function() {
-      Ember.run.later(this, 'refresh', 1000);
+      Ember.run.later(this, 'refresh', 5000);
     }.bind(this));
   },
 
