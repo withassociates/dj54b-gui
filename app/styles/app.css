@@ -69,10 +69,9 @@ p { margin: 24px 0; }
   color: #ffffff;
   cursor: pointer;
   outline: 0;
-  transition: opacity 0.3s;
 }
 
-.control:hover {
+.control:active {
   opacity: 0.5;
 }
 
@@ -113,6 +112,7 @@ p { margin: 24px 0; }
   margin: 0 auto 24px auto;
   max-width: 100%;
   max-height: 420px;
+  width: auto; height: auto;
   padding: 24px;
 
   background: #ffffff;
@@ -129,3 +129,16 @@ p { margin: 24px 0; }
 
 }
 
+.application:after {
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: white url(/images/spinner.gif) no-repeat center;
+  opacity: 0;
+  -webkit-transition: opacity .1s;
+  -moz-transition: opacity .1s;
+  transition: opacity .1s;
+  pointer-events: none;
+}
+.application.is-loading:after {
+  opacity: 0.75;
+}

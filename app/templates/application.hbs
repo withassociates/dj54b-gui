@@ -1,7 +1,13 @@
 <div class="content-container">
   {{spotify-art trackID=track.id}}
-  <div class="track-name">{{track.name}}</div>
-  <div class="track-artist">{{track.artist}}</div>
+
+  {{#if track}}
+    <div class="track-name">{{track.name}}</div>
+    <div class="track-artist">{{track.artist}}</div>
+  {{else}}
+    <div class="track-name">Loading</div>
+    <div class="track-artist">Just a sec…</div>
+  {{/if}}
 
   <div class="controls">
     {{#if isPlaying}}

@@ -7,7 +7,7 @@ export default Ember.Component.extend({
   classNames: ['track-image'],
 
   fetchArt: function() {
-    this.set('src', '');
+    this.set('src', '/images/art-spinner.gif');
 
     var id = this.get('trackID');
 
